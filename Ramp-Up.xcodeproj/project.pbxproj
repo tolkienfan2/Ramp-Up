@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4588D3FE1F6D85F2002B24F8 /* RampPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4588D3FD1F6D85F2002B24F8 /* RampPickerVC.swift */; };
 		45DDC7631F6C7A0D00E197D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDC7621F6C7A0D00E197D6 /* AppDelegate.swift */; };
 		45DDC7651F6C7A0D00E197D6 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DDC7641F6C7A0D00E197D6 /* art.scnassets */; };
-		45DDC7671F6C7A0D00E197D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDC7661F6C7A0D00E197D6 /* ViewController.swift */; };
+		45DDC7671F6C7A0D00E197D6 /* RampPlacerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DDC7661F6C7A0D00E197D6 /* RampPlacerVC.swift */; };
 		45DDC76A1F6C7A0D00E197D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45DDC7681F6C7A0D00E197D6 /* Main.storyboard */; };
 		45DDC76C1F6C7A0D00E197D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45DDC76B1F6C7A0D00E197D6 /* Assets.xcassets */; };
 		45DDC76F1F6C7A0D00E197D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45DDC76D1F6C7A0D00E197D6 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4588D3FD1F6D85F2002B24F8 /* RampPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RampPickerVC.swift; sourceTree = "<group>"; };
 		45DDC75F1F6C7A0D00E197D6 /* Ramp-Up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ramp-Up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45DDC7621F6C7A0D00E197D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45DDC7641F6C7A0D00E197D6 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		45DDC7661F6C7A0D00E197D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		45DDC7661F6C7A0D00E197D6 /* RampPlacerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RampPlacerVC.swift; sourceTree = "<group>"; };
 		45DDC7691F6C7A0D00E197D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45DDC76B1F6C7A0D00E197D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45DDC76E1F6C7A0D00E197D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4588D3FC1F6D85D2002B24F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				45DDC7661F6C7A0D00E197D6 /* RampPlacerVC.swift */,
+				4588D3FD1F6D85F2002B24F8 /* RampPickerVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		45DDC7561F6C7A0D00E197D6 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +67,9 @@
 		45DDC7611F6C7A0D00E197D6 /* Ramp-Up */ = {
 			isa = PBXGroup;
 			children = (
+				4588D3FC1F6D85D2002B24F8 /* Controller */,
 				45DDC7621F6C7A0D00E197D6 /* AppDelegate.swift */,
 				45DDC7641F6C7A0D00E197D6 /* art.scnassets */,
-				45DDC7661F6C7A0D00E197D6 /* ViewController.swift */,
 				45DDC7681F6C7A0D00E197D6 /* Main.storyboard */,
 				45DDC76B1F6C7A0D00E197D6 /* Assets.xcassets */,
 				45DDC76D1F6C7A0D00E197D6 /* LaunchScreen.storyboard */,
@@ -139,7 +150,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45DDC7671F6C7A0D00E197D6 /* ViewController.swift in Sources */,
+				45DDC7671F6C7A0D00E197D6 /* RampPlacerVC.swift in Sources */,
+				4588D3FE1F6D85F2002B24F8 /* RampPickerVC.swift in Sources */,
 				45DDC7631F6C7A0D00E197D6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +181,7 @@
 		45DDC7711F6C7A0D00E197D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -226,6 +239,7 @@
 		45DDC7721F6C7A0D00E197D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -276,6 +290,7 @@
 		45DDC7741F6C7A0D00E197D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7LVD7K98P2;
 				INFOPLIST_FILE = "Ramp-Up/Info.plist";
@@ -290,6 +305,7 @@
 		45DDC7751F6C7A0D00E197D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7LVD7K98P2;
 				INFOPLIST_FILE = "Ramp-Up/Info.plist";
@@ -320,6 +336,7 @@
 				45DDC7751F6C7A0D00E197D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
