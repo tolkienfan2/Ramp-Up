@@ -31,7 +31,7 @@
                                     <action selector="rampBtnPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Gxe-0l-Uo0"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="w9q-zE-DRz">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="w9q-zE-DRz">
                                 <rect key="frame" x="10" y="617" width="205" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEn-St-9N4">
@@ -41,18 +41,30 @@
                                             <constraint firstAttribute="width" constant="40" id="Vks-so-wAi"/>
                                         </constraints>
                                         <state key="normal" image="removeButton"/>
+                                        <connections>
+                                            <action selector="removeBtnPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="BfY-qh-CaC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3EW-UA-iwC">
                                         <rect key="frame" x="55" y="0.0" width="40" height="40"/>
                                         <state key="normal" image="rotateButton"/>
+                                        <connections>
+                                            <action selector="rotateBtnPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Phq-2o-WMh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pii-aP-8AK">
                                         <rect key="frame" x="110" y="0.0" width="40" height="40"/>
                                         <state key="normal" image="upArrow"/>
+                                        <connections>
+                                            <action selector="upArrowPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="gOU-JB-ji7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWB-gI-db6">
                                         <rect key="frame" x="165" y="0.0" width="40" height="40"/>
                                         <state key="normal" image="downArrow"/>
+                                        <connections>
+                                            <action selector="downArrowPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="08y-T6-6bp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -71,7 +83,11 @@
                         <viewLayoutGuide key="safeArea" id="9E5-lB-7Lb"/>
                     </view>
                     <connections>
+                        <outlet property="controls" destination="w9q-zE-DRz" id="kQS-bV-q81"/>
+                        <outlet property="downBtn" destination="HWB-gI-db6" id="Tno-Xo-IAO"/>
+                        <outlet property="rotateBtn" destination="3EW-UA-iwC" id="3Xm-5y-Cui"/>
                         <outlet property="sceneView" destination="Kcb-QG-aeH" id="HMM-VG-Qb0"/>
+                        <outlet property="upBtn" destination="Pii-aP-8AK" id="CgO-0V-itu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
