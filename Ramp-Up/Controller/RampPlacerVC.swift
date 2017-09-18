@@ -13,27 +13,21 @@ import ARKit
 class RampPlacerVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentationControllerDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
-    var nodeModel: SCNNode!
-    let nodeName = "pipe"
+    var selectedRamp: String!
+    var selectedRampNode: SCNNode?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Set the view's delegate
         sceneView.delegate = self
         
-        // Show statistics such as fps and timing information
         sceneView.showsStatistics = false
         
         sceneView.antialiasingMode = .multisampling4X
         
-        // Create a new scene
-        let scene = SCNScene()
+        let scene = SCNScene(named: "art.scnassets/main.scn")!
+        sceneView.autoenablesDefaultLighting = true
         
-        // Set the scene to the view
         sceneView.scene = scene
-        
-        let pipeScene = SCNScene(named: "art.scnassets/pipe.dae")
-        nodeModel = pipeScene?.rootNode.childNode(withName: nodeName, recursively: true)
         
     }
     
@@ -78,7 +72,37 @@ class RampPlacerVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentationCo
     }
     
     func onRampSelected(_ rampName: String) {
-        
+        selectedRamp = rampName
+    }
+    
+    func placeRamp(position: SCNVector3, name: String) -> SCNNode {
+        let obj = SCNScene(named: "art.scnassets/\(name).dae")
+        let node = obj?.rootNode.childNode(withName: name, recursively: true)
+        selectedRampNode = node
+        return selectedRampNode!
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+        let results = sceneView.hitTest(touch.location(in: sceneView), types: [.featurePoint])
+        guard let hitFeature = results.last else {
+            dismiss(animated: true, completion: nil)
+            popUpWarning()
+            return
+        }
+        let hitTransform = SCNMatrix4(hitFeature.worldTransform)
+        let hitPosition = SCNVector3Make(hitTransform.m41, hitTransform.m42, hitTransform.m43)
+        if let rampName = selectedRamp {
+            let newRampNode = placeRamp(position: hitPosition, name: rampName)
+            sceneView.scene.rootNode.addChildNode(newRampNode)
+        }
+    }
+    
+    func popUpWarning() {
+        let popUp = UIAlertController(title: "Insufficient context!", message: "Move your device around so it can see more features in your environment", preferredStyle: .alert)
+        let popUpAction = UIAlertAction(title: "OK", style: .cancel)
+        popUp.addAction(popUpAction)
+        present(popUp, animated: true, completion: nil)
     }
 
     func session(_ session: ARSession, didFailWithError error: Error) {

@@ -31,12 +31,39 @@
                                     <action selector="rampBtnPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Gxe-0l-Uo0"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="w9q-zE-DRz">
+                                <rect key="frame" x="10" y="617" width="205" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEn-St-9N4">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="K1h-eT-hqv"/>
+                                            <constraint firstAttribute="width" constant="40" id="Vks-so-wAi"/>
+                                        </constraints>
+                                        <state key="normal" image="removeButton"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3EW-UA-iwC">
+                                        <rect key="frame" x="55" y="0.0" width="40" height="40"/>
+                                        <state key="normal" image="rotateButton"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pii-aP-8AK">
+                                        <rect key="frame" x="110" y="0.0" width="40" height="40"/>
+                                        <state key="normal" image="upArrow"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWB-gI-db6">
+                                        <rect key="frame" x="165" y="0.0" width="40" height="40"/>
+                                        <state key="normal" image="downArrow"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="w9q-zE-DRz" firstAttribute="leading" secondItem="9E5-lB-7Lb" secondAttribute="leading" constant="10" id="0Fx-3Y-JuF"/>
                             <constraint firstItem="9E5-lB-7Lb" firstAttribute="bottom" secondItem="vkT-Hc-pvX" secondAttribute="bottom" constant="10" id="4Pd-5J-xRi"/>
                             <constraint firstItem="9E5-lB-7Lb" firstAttribute="trailing" secondItem="vkT-Hc-pvX" secondAttribute="trailing" constant="10" id="Ho1-19-9Nc"/>
                             <constraint firstItem="Kcb-QG-aeH" firstAttribute="trailing" secondItem="9E5-lB-7Lb" secondAttribute="trailing" id="Lr7-59-Lub"/>
+                            <constraint firstItem="9E5-lB-7Lb" firstAttribute="bottom" secondItem="w9q-zE-DRz" secondAttribute="bottom" constant="10" id="bQj-7X-yWM"/>
                             <constraint firstItem="Kcb-QG-aeH" firstAttribute="bottom" secondItem="9E5-lB-7Lb" secondAttribute="bottom" id="su9-4U-qbq"/>
                             <constraint firstItem="Kcb-QG-aeH" firstAttribute="top" secondItem="oVT-nY-gTG" secondAttribute="top" id="vsT-sM-Xpr"/>
                             <constraint firstItem="Kcb-QG-aeH" firstAttribute="leading" secondItem="9E5-lB-7Lb" secondAttribute="leading" id="wRA-5y-J7t"/>
@@ -53,6 +80,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="downArrow" width="32" height="32"/>
         <image name="rampIcon" width="107" height="71"/>
+        <image name="removeButton" width="32" height="32"/>
+        <image name="rotateButton" width="32" height="32"/>
+        <image name="upArrow" width="32" height="32"/>
     </resources>
 </document>
